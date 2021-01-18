@@ -1,3 +1,5 @@
+@import '~src/definitions';
+
 :host {
   display: block;
 
@@ -54,4 +56,56 @@ cvd-mitigations-control,
 cvd-graphs,
 cvd-status-display {
   margin-bottom: 2rem;
+}
+
+.open-above-panel-space {
+  padding-bottom: 10%;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+}
+
+.open-mitigation-button {
+  background-color: map-get($mat-primary, main);
+  right: 10%;
+  cvd-icon {
+    color: $dark-bg-darker;
+  }
+}
+
+.close-above-panel-space {
+  justify-content: flex-end;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+}
+
+.close-mitigation-button {
+  background-color: transparent;
+  cvd-icon {
+    color: map-get($mat-warn, main);
+  }
+}
+
+.mobile-mitigation-panel {
+  background-color: $dark-bg-darker;
+  padding-left: 0px;
+  margin-bottom: 0%;
+}
+
+.mobile-mitigation-panel-box {
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+  flex: 1;
+  left: 0px;
+  position: fixed;
+  width: 100vw;
+  max-height: fit-content;
+  bottom: 0%;
+  z-index: 102;
 }
